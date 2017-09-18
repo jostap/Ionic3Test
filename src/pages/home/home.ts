@@ -24,12 +24,23 @@ import { MainPage } from '../main/main';
   ]
 })
 export class HomePage {
+  splash = true;
+  //tabBarElement: any;
+
   @ViewChild(Slides) slides: Slides;
   skipMsg: string = "Skip";
   state: string = 'x';
 
   constructor(public navCtrl: NavController) {
+    //this.tabBarElement = document.querySelector('.tabbar');
+  }
 
+  ionViewDidLoad(){
+    //this.tabBarElement.style.display = 'none';
+    setTimeout(() => {
+      this.splash = false;
+      //this.tabBarElement.style.display = 'flex';
+    }, 4000)
   }
 
   skip() {
