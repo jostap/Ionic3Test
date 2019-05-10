@@ -23,6 +23,7 @@ import { MainPage } from '../main/main';
     ])
   ]
 })
+
 export class HomePage {
   splash = true;
   //tabBarElement: any;
